@@ -15,10 +15,12 @@
             </tr>
             {% for row in data %} 
             <tr class="table__row">
-                {% for cell in row %}
+                {% for cell in row[:-1] %}
                 <td class="table__cell"> {{ cell }} </td>
                 {% endfor %}
-                <td><input class="check_box" type="checkbox" name="name1" />&nbsp;</td>
+                <td> <input class="check_box" type="checkbox" name="name1" />&nbsp;</td>
+                <td> <img src="{{row[-1]}}"  width="120" height="90"> </img> </td>
+                <!-- <img src="https://ecvo8ubt6cq.exactdn.com/wp-content/uploads/2021/07/f97acb41-5694-4b4b-94b3-af590226f170.jpg"  width="120" height="90"> </img> -->
             </tr>
             {% endfor %}
         </table>
